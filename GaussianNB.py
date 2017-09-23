@@ -41,3 +41,18 @@ from sklearn.model_selection import cross_val_score
 scores = cross_val_score(estimator=classifier, X = X_train, y = y_train, cv= 10)
 
 print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
+
+#Calculating Precision
+from sklearn.metrics import precision_score
+Precision = precision_score(y_test, y_pred)
+print("Precision : %0.2f" %Precision)
+
+#Calculating Recall
+from sklearn.metrics import recall_score
+Recall = recall_score(y_test, y_pred)
+print("Recall : %0.2f " %Recall)
+
+#Calculating F1 Score
+from sklearn.metrics import f1_score
+F1 = f1_score(y_test, y_pred)
+print("F1 Score: %0.2f " %F1)
